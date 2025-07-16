@@ -1,0 +1,130 @@
+====================================================================================================
+Lint Check Report
+Questa Lint  Version 2021.1 4558100 win64 28-Jan-2021
+
+Timestamp            : Thu Jul  3 02:54:19 2025
+Description          : Report for referring checks count, check violations details, and  design information
+Design               : fifo_memory
+Database             : E:/digital_design_diploma/my_assig_answers/assig6/FIFO/lint.db
+Design Quality Score : 100%
+
+Sections:
+   Section 1 : Check Summary
+   Section 2 : Check Details
+   Section 3 : Design Information
+====================================================================================================
+
+
+====================================================================================================
+Section 1 : Check Summary
+====================================================================================================
+-------------
+| Error (0) |
+-------------
+
+---------------
+| Warning (0) |
+---------------
+
+-------------
+| Info (12) |
+-------------
+  assigns_mixed                           : 2
+  assigns_mixed_in_always_block           : 2
+  parameter_name_duplicate                : 3
+  comment_not_in_english                  : 1
+  line_char_large                         : 1
+  multi_ports_in_single_line              : 3
+
+----------------
+| Resolved (0) |
+----------------
+
+
+====================================================================================================
+Section 2 : Check Details
+====================================================================================================
+-------------
+| Error (0) |
+-------------
+
+
+---------------
+| Warning (0) |
+---------------
+
+
+-------------
+| Info (12) |
+-------------
+
+Check: assigns_mixed [Category: Simulation] (2)
+       [Message: Signal is assigned with blocking and non-blocking assignments. Signal '<signal>', Module '<module>', File '<file1>', Line '<line1>' and File '<file2>', Line '<line2>'.]
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+assigns_mixed: [uninspected] Signal is assigned with blocking and non-blocking assignments. Signal 'wrt_ptr', Module 'fifo_memory', File 'E:/digital_design_diploma/my_assig_answers/assig6/FIFO/rtl.v', Line '19' and File 'E:/digital_design_diploma/my_assig_answers/assig6/FIFO/rtl.v', Line '24'.
+
+assigns_mixed: [uninspected] Signal is assigned with blocking and non-blocking assignments. Signal 'rd_ptr', Module 'fifo_memory', File 'E:/digital_design_diploma/my_assig_answers/assig6/FIFO/rtl.v', Line '31' and File 'E:/digital_design_diploma/my_assig_answers/assig6/FIFO/rtl.v', Line '37'.
+
+
+Check: assigns_mixed_in_always_block [Category: Simulation] (2)
+       [Message: Always block has blocking and non-blocking assignments. Module '<module>', File '<file>', Line '<line1>', Line '<line2>'.]
+--------------------------------------------------------------------------------------------------------------------------------------------
+assigns_mixed_in_always_block: [uninspected] Always block has blocking and non-blocking assignments. Module 'fifo_memory', File 'E:/digital_design_diploma/my_assig_answers/assig6/FIFO/rtl.v', Line '23', Line '24'. [RTL ID:f277745d_00200]
+
+assigns_mixed_in_always_block: [uninspected] Always block has blocking and non-blocking assignments. Module 'fifo_memory', File 'E:/digital_design_diploma/my_assig_answers/assig6/FIFO/rtl.v', Line '36', Line '37'. [RTL ID:473186a9_00200]
+
+
+Check: parameter_name_duplicate [Category: Nomenclature Style] (3)
+       [Message: Same parameter name is used in more than one module. Parameter '<parameter>', Total count '<count>', First module: Module '<module1>', File '<file1>', Line '<line1>', Second module: Module '<module2>', File '<file2>', Line '<line2>']
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+parameter_name_duplicate: [uninspected] Same parameter name is used in more than one module. Parameter 'n', Total count '2', First module: Module 'binary_to_gray', File 'E:/digital_design_diploma/my_assig_answers/assig6/FIFO/binary_gray.v', Line '2', Second module: Module 'gray_to_binary', File 'E:/digital_design_diploma/my_assig_answers/assig6/FIFO/binary_gray.v', Line '19'
+
+parameter_name_duplicate: [uninspected] Same parameter name is used in more than one module. Parameter 'WIDTH', Total count '2', First module: Module 'dff_sync_2', File 'E:/digital_design_diploma/my_assig_answers/assig6/FIFO/dff_sync_2.v', Line '2', Second module: Module 'gray_encoded_sync', File 'E:/digital_design_diploma/my_assig_answers/assig6/FIFO/gray_encoded_sync.v', Line '2'
+
+parameter_name_duplicate: [uninspected] Same parameter name is used in more than one module. Parameter 'RSTTYPE', Total count '2', First module: Module 'dff_sync_2', File 'E:/digital_design_diploma/my_assig_answers/assig6/FIFO/dff_sync_2.v', Line '3', Second module: Module 'gray_encoded_sync', File 'E:/digital_design_diploma/my_assig_answers/assig6/FIFO/gray_encoded_sync.v', Line '3'
+
+
+Check: comment_not_in_english [Category: Nomenclature Style] (1)
+       [Message: Comments include non-English characters. File '<file>', Line '<line>'.]
+-----------------------------------------------------------------------------------------
+comment_not_in_english: [uninspected] Comments include non-English characters. File 'E:/digital_design_diploma/my_assig_answers/assig4/q3/q3_code.v', Line '29'.
+
+
+Check: line_char_large [Category: Rtl Design Style] (1)
+       [Message: Line has more characters than the specified limit. Current Count '<count>', Specified Limit '<limit>', File '<file>', Line '<line>'.]
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+line_char_large: [uninspected] Line has more characters than the specified limit. Current Count '142', Specified Limit '110', File 'E:/digital_design_diploma/my_assig_answers/assig6/FIFO/rtl.v', Line '42'.
+
+
+Check: multi_ports_in_single_line [Category: Rtl Design Style] (3)
+       [Message: Multiple ports are declared in one line. Module '<module>', File '<file>', Line '<line>'.]
+------------------------------------------------------------------------------------------------------------
+multi_ports_in_single_line: [uninspected] Multiple ports are declared in one line. Module 'dff_sync_2', File 'E:/digital_design_diploma/my_assig_answers/assig6/FIFO/dff_sync_2.v', Line '4'.
+
+multi_ports_in_single_line: [uninspected] Multiple ports are declared in one line. Module 'gray_encoded_sync', File 'E:/digital_design_diploma/my_assig_answers/assig6/FIFO/gray_encoded_sync.v', Line '4'.
+
+multi_ports_in_single_line: [uninspected] Multiple ports are declared in one line. Module 'fifo_memory', File 'E:/digital_design_diploma/my_assig_answers/assig6/FIFO/rtl.v', Line '6'.
+    1 more occurrence at: line 8.
+
+
+
+----------------
+| Resolved (0) |
+----------------
+
+
+
+====================================================================================================
+Section 3 : Design Information
+====================================================================================================
+-----------
+| Summary |
+-----------
+  Register Bits                           : 112
+  Latch Bits                              : 0
+  User-specified Blackboxes               : 0
+  Inferred Blackboxes                     : 0
+  Empty Modules                           : 0
+  Unresolved Modules                      : 0
+  Hierarchical IPs                        : 0
+
